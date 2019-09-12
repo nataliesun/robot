@@ -1,8 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './components/App/App';
+import { library } from '@fortawesome/fontawesome-svg-core';
 import * as serviceWorker from './serviceWorker';
+
+import { faChevronUp, faChevronDown, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+
+library.add(
+  faChevronUp,
+  faChevronDown,
+  faChevronLeft,
+  faChevronRight
+)
+
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
