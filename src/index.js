@@ -6,6 +6,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import * as serviceWorker from './serviceWorker';
 
 import { faChevronUp, faChevronDown, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { RobotProvider } from './contexts/RobotContext';
 
 library.add(
   faChevronUp,
@@ -15,9 +16,11 @@ library.add(
 )
 
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <RobotProvider>
+    <App />
+  </RobotProvider>
+  , document.getElementById('root'));
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+
 serviceWorker.unregister();
